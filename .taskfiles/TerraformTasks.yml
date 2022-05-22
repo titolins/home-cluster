@@ -3,19 +3,37 @@ version: "3"
 
 tasks:
 
-  init:
-    desc: Initialize terraform dependencies
+  pve:init:
+    desc: Initialize proxmox terraform dependencies
+    dir: provision/terraform/proxmox
+    cmds:
+      - terraform init {{.CLI_ARGS}}
+
+  pve:plan:
+    desc: Show the changes terraform will make to proxmox resources
+    dir: provision/terraform/proxmox
+    cmds:
+      - terraform plan {{.CLI_ARGS}}
+
+  pve:apply:
+    desc: Apply the changes to proxmox
+    dir: provision/terraform/proxmox
+    cmds:
+      - terraform apply {{.CLI_ARGS}}
+
+  cf:init:
+    desc: Initialize Cloudflare terraform dependencies
     dir: provision/terraform/cloudflare
     cmds:
       - terraform init {{.CLI_ARGS}}
 
-  plan:
-    desc: Show the changes terraform will make
+  cf:plan:
+    desc: Show the changes terraform will make to Cloudflare resources
     dir: provision/terraform/cloudflare
     cmds:
       - terraform plan {{.CLI_ARGS}}
 
-  apply:
+  cf:apply:
     desc: Apply the changes to Cloudflare
     dir: provision/terraform/cloudflare
     cmds:

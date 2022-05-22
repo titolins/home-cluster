@@ -11,3 +11,5 @@
         seconds: 5
   roles:
     - ubuntu
+    - devsec.hardening.os_hardening
+    - devsec.hardening.ssh_hardening

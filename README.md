@@ -1,3 +1,15 @@
+# Home cluster
+This was generated from the awesome [k8s-at-home template](https://github.com/k8s-at-home/template-cluster-k3s).
+
+Since I'm using proxmox on a pro-liant to setup my kube nodes, I also wanted a well structure repo that could help me fitting that in. Changes made to the original template are pretty much adding this pve setup:
+- Add proxmox terraform setup to `provision/terraform/proxmox/`
+    - You can find a simple [readme](https://github.com/titolins/home-cluster/tree/main/provision/terraform/proxmox) there with steps taken for that
+- Modify terraform tasks file so we can use go-task for both cloudflare and proxmox operations
+
+Regarding the ansible playbooks:
+- devsec roles `os_hardening` `ssh_hardening` were added to the playbook;
+- infrastructure related variables were moved to secrets (`ansible_host`)
+
 # Template for deploying k3s backed by Flux
 
 Highly opinionated template for deploying a single [k3s](https://k3s.io) cluster with [Ansible](https://www.ansible.com) and [Terraform](https://www.terraform.io) backed by [Flux](https://toolkit.fluxcd.io/) and [SOPS](https://toolkit.fluxcd.io/guides/mozilla-sops/).

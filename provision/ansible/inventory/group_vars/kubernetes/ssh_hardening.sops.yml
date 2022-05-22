@@ -1,0 +1,23 @@
+network_ipv6_enabled: ENC[AES256_GCM,data:HLODTRg=,iv:WSWc4ko4d46bkCggN4hYvAtSWWGKeWRNGzZ3n/pCn9o=,tag:Srw3LzwM5KD0POktc5yidg==,type:bool]
+ssh_server_ports:
+    - ENC[AES256_GCM,data:wzXg+w==,iv:CBjRBSmSXRcUtsBMmHM7GXV3EMGnPp9NnlsM9M1umdI=,tag:3L4B3Ii5SmpQlo135c/BmA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1q5fzt664n3mp0e2u35m5whp3gykzdc5m068540fx6cz47gpxrchsq6glq6
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoSWFTd3grWXZwUkIzVUdO
+            Zi9kZmFVQjBCRXhheEpNSXpmd2pnL0FnbG1BCmN2SkdoTkxqY1lwSkE1ZlpsZm9i
+            dG9ZNGdBSDJsZlhFZ05vQ0RLWWlQNGMKLS0tIFRxNmNqSTZ1ZEs0VXg0azh3VkY0
+            SEFjRWsvb3NSajB6NDV2bEFhWE9QK3cKPEPRzEeerybMFMGkx1S0EMSiN5GKzYpS
+            9PDXY7oKos9hnU8eAS3JOxSyHhiZl3ldSB6gciGd3C/gGr1ww2t9jQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-05-22T20:48:42Z"
+    mac: ENC[AES256_GCM,data:/fCJu+0dCU2SWhxexAUEL2Z4NrdPoG2Jgmz5ZFcg1C6s/SrbtrKMwXSAn6CS8ZuntCmCIq8xuHkS/JIGrK730wG+z08EiddobCBrvWck0IvpwVnP37Tomgt2ub+N+oagqBm+Zm0zhqO0smUVJXmZc09yOo40599dLDx+r9JAlWM=,iv:CzbP7NT+ju7ZrWEYDWgN7RP0uPMvhSug1idtOwpl34k=,tag:omQtOnRA2OcB0ZIxlQUXHA==,type:str]
+    pgp: []
+    unencrypted_regex: ^(kind)$
+    version: 3.7.3
